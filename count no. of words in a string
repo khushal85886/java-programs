@@ -1,0 +1,40 @@
+package strings;
+import java.util.Scanner;
+
+public class count_words {
+	
+public static String takeINput()
+	{
+		Scanner s = new Scanner(System.in);
+	System.out.println("Enter the string :  ");
+		String str = s.nextLine();
+	return str;
+	}
+	
+	public static void countWords(String str)
+	{
+		int size = str.length();
+		int counter = 1;
+
+		
+		for(int i=0;i<size-1;i++)
+		{
+			if(str.charAt(i)==' ')
+			{
+			counter++;
+			}
+		}
+		
+		System.out.print("Number of words in the string are  :  " + counter);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		String str = takeINput();
+		countWords(str);
+
+		
+	}
+
+}
