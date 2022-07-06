@@ -1,0 +1,33 @@
+package strings;
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class check_Permutation {
+
+	public static String sort(String st)
+	{
+		char[] content=st.toCharArray();
+		Arrays.sort(content);	
+		return new String(content);
+	}
+	public static boolean checkPermutation()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the string1 : ");
+		String str1 = s.nextLine();
+		System.out.println("Enter the string2 : ");
+		String str2 = s.nextLine();
+		
+		
+		return sort(str1).equals(sort(str2));
+
+
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean res=checkPermutation();
+		System.out.print(res);
+   }
+
+}
