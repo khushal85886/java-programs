@@ -1,0 +1,38 @@
+package strings;
+import java.util.*;
+
+public class check_string_pallindrome {
+
+	public static String takeInput()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the string :  ");
+		String str = s.next();
+		
+		return str;
+	}
+	
+	public static boolean checkPallindrome(String str)
+	{
+		boolean check = false;
+		int size =str.length();
+		String st="";
+		for(int i=size-1;i>=0;i--)
+		{
+			st=st+str.charAt(i);
+		}
+		if(st.equals(str))
+		{
+			check=true;
+		}
+		return check;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String string = takeInput();
+		boolean ch=checkPallindrome(string);
+		System.out.println(ch);
+	}
+
+}
