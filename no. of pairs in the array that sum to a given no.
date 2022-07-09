@@ -1,0 +1,42 @@
+package array;
+import java.util.Scanner;
+
+public class check_sum_of_Pair {
+
+	public static int checkSumPair()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of th array : ");
+		int n = s.nextInt();
+		int input[]=new int[n];
+		
+		System.out.println("Enter the elemets in the array : ");
+		
+		for(int i= 0;i<n;i++)
+		{
+			input[i]=s.nextInt();
+		}
+		System.out.println("Enter the sum to be comapred :  ");
+		int sum = s.nextInt();
+		int c=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				if(sum==input[i]+input[j])
+				{
+					c=c+1;
+				}
+			}
+		}
+		return c ;
+	}
+
+	public static void main(String[] args) {
+
+	  int number = checkSumPair();
+	  System.out.println("Number of pairs that can match the sum are : " + number);
+	}
+
+}
